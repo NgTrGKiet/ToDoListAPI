@@ -1,0 +1,15 @@
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\bin\Debug\net6.0\BLL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\bin\Debug\net6.0\BLL.pdb
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.pdb
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\ref\BLL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\bin\Debug\net6.0\DAL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\bin\Debug\net6.0\DAL.pdb
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\BLL\obj\Debug\net6.0\BLL.csproj.Up2Date

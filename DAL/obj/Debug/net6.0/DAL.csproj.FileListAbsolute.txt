@@ -1,0 +1,14 @@
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\bin\Debug\net6.0\DAL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\bin\Debug\net6.0\DAL.pdb
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.pdb
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\KIET's Folder\CODE\Learning\C#\ToDoListAPI\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
