@@ -12,6 +12,8 @@ namespace TodoServer
             CreateMap<UserTask, TaskDTO>().ReverseMap();
             CreateMap<UserTask, TaskCreateDTO>().ReverseMap();
             CreateMap<UserTask, UpdateTaskDTO>().ReverseMap();
+
+            CreateMap<User, UserDTO>().ReverseMap();
         }
     }
 }

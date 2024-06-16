@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BLL.Model;
-using BLL.Services.Iservice;
+using BLL.Services.IService;
 using DAL.Entites;
 using DAL.Entites.DTO;
 using DAL.Entities.DTO;
@@ -27,7 +27,7 @@ namespace TodoServer.Controllers
 
         [HttpGet("all-task")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<APIResponse>> GetTasks()
+        public async Task<IActionResult> GetTasks()
         {
             try
             {
@@ -42,15 +42,15 @@ namespace TodoServer.Controllers
                 {
                     ex.Message
                 };
+                return BadRequest(_response);
             }
-            return _response;
         }
 
         [HttpGet("single-task/{id:int}", Name = "GetTask")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<APIResponse>> GetTask(int id)
+        public async Task<IActionResult> GetTask(int id)
         {
             try
             {
@@ -69,14 +69,14 @@ namespace TodoServer.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 _response.StatusCode = HttpStatusCode.BadRequest;
+                return BadRequest(_response);
             }
-            return _response;
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<APIResponse>> CreateTask([FromForm] TaskCreateDTO createDTO)
+        public async Task<IActionResult> CreateTask([FromBody] TaskCreateDTO createDTO)
         {
             try
             {
@@ -98,15 +98,15 @@ namespace TodoServer.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.Message };
                 _response.StatusCode = HttpStatusCode.BadRequest;
+                return BadRequest(_response);
             }
-            return _response;
         }
 
         [HttpPut("{id:int}", Name = "UpdateTask")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<APIResponse>> UpdateTask(int id, [FromBody] UpdateTaskDTO updateDTO)
+        public async Task<IActionResult> UpdateTask(int id, [FromBody] UpdateTaskDTO updateDTO)
         {
             try
             {
@@ -134,15 +134,15 @@ namespace TodoServer.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.Message };
                 _response.StatusCode = HttpStatusCode.BadRequest;
+                return BadRequest(_response);
             }
-            return _response;
         }
 
         [HttpDelete("{id:int}", Name = "DeleteTask")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<APIResponse>> DeleteTask(int id)
+        public async Task<IActionResult> DeleteTask(int id)
         {
             try
             {
@@ -160,14 +160,15 @@ namespace TodoServer.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.Message };
                 _response.StatusCode = HttpStatusCode.NotFound;
+                return NotFound(_response);
             }
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.Message };
                 _response.StatusCode = HttpStatusCode.BadRequest;
+                return BadRequest(_response);
             }
-            return _response;
         }
     }
 }

@@ -22,37 +22,6 @@ namespace DAL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("DAL.Entites.Token", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("ExpiresAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("access_token")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("isValid")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("refresh_token")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("user_id")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tokens");
-                });
-
             modelBuilder.Entity("DAL.Entites.User", b =>
                 {
                     b.Property<string>("Id")

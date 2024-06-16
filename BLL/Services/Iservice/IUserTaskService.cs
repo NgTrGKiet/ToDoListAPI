@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services.Iservice
+namespace BLL.Services.IService
 {
     public interface IUserTaskService
     {

@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using BLL.Services.Iservice;
+using BLL.Services.IService;
 using DAL.Entites;
 using DAL.Entities.DTO;
 using DAL.Repository;

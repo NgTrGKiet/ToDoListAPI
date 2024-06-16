@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DAL.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class fifth : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,8 +35,8 @@ namespace DAL.Migrations
                     user_id = table.Column<string>(type: "text", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),
                     priority = table.Column<string>(type: "text", nullable: false),
-                    start = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    end = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    Start = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    End = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {

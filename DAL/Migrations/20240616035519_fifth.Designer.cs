@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240615004755_fourth")]
-    partial class fourth
+    [Migration("20240616035519_fifth")]
+    partial class fifth
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,37 +23,6 @@ namespace DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("DAL.Entites.Token", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("ExpiresAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("access_token")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("isValid")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("refresh_token")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("user_id")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tokens");
-                });
 
             modelBuilder.Entity("DAL.Entites.User", b =>
                 {
