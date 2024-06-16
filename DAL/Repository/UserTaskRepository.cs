@@ -23,9 +23,9 @@ namespace DAL.Repository
             this._dbSet = _db.Set<UserTask>();
         }
 
-        public async Task<List<UserTask>> GetAllTasksAsync()
+        public async Task<List<UserTask>> GetAllTasksAsync(string userId)
         {
-            return await _dbSet.ToListAsync();
+            return await _dbSet.Where(u=>u.user_id == userId).ToListAsync();
         }
 
         public async Task<UserTask> GetAsync(Expression<Func<UserTask, bool>> filter = null, bool tracked = true)

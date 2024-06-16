@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\bll\\services\\usertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|solutionrelative:bll\\services\\usertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|solutionrelative:bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23CE685B-2ABE-4EB0-A85B-25195DA7AFF7}|DAL\\DAL.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\dal\\repository\\usertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CE685B-2ABE-4EB0-A85B-25195DA7AFF7}|DAL\\DAL.csproj|solutionrelative:dal\\repository\\usertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CE685B-2ABE-4EB0-A85B-25195DA7AFF7}|DAL\\DAL.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\dal\\repository\\irepository\\iusertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CE685B-2ABE-4EB0-A85B-25195DA7AFF7}|DAL\\DAL.csproj|solutionrelative:dal\\repository\\irepository\\iusertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\bll\\services\\iservice\\iusertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A784EFC-E503-48F6-B84F-6CBCE3F37189}|BLL\\BLL.csproj|solutionrelative:bll\\services\\iservice\\iusertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +30,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\AuthService.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\AuthService.cs",
-              "RelativeToolTip": "BLL\\Services\\AuthService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCMAAABJAAAA",
+              "Title": "UserTaskRepository.cs",
+              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\DAL\\Repository\\UserTaskRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repository\\UserTaskRepository.cs",
+              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\DAL\\Repository\\UserTaskRepository.cs",
+              "RelativeToolTip": "DAL\\Repository\\UserTaskRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T03:58:37.011Z",
+              "WhenOpened": "2024-06-16T06:30:57.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserTaskService.cs",
+              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\UserTaskService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\UserTaskService.cs",
+              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\UserTaskService.cs",
+              "RelativeToolTip": "BLL\\Services\\UserTaskService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:30:32.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserTaskRepository.cs",
+              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\DAL\\Repository\\IRepository\\IUserTaskRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repository\\IRepository\\IUserTaskRepository.cs",
+              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\DAL\\Repository\\IRepository\\IUserTaskRepository.cs",
+              "RelativeToolTip": "DAL\\Repository\\IRepository\\IUserTaskRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:30:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserTaskService.cs",
+              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\IService\\IUserTaskService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\IService\\IUserTaskService.cs",
+              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\BLL\\Services\\IService\\IUserTaskService.cs",
+              "RelativeToolTip": "BLL\\Services\\IService\\IUserTaskService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAwwAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:30:09.382Z",
               "EditorCaption": ""
             },
             {
@@ -43,15 +94,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "TodoServer\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "TodoServer\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAQwDgAAABJAAAA",
+              "DocumentIndex": 4,
+              "Title": "UserTaskController.cs",
+              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\UserTaskController.cs",
+              "RelativeDocumentMoniker": "TodoServer\\Controllers\\UserTaskController.cs",
+              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\UserTaskController.cs",
+              "RelativeToolTip": "TodoServer\\Controllers\\UserTaskController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwLMAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T03:57:42.907Z",
+              "WhenOpened": "2024-06-16T06:19:39.326Z",
               "EditorCaption": ""
             }
           ]

@@ -25,18 +25,27 @@ namespace BLL.Services
             _usertask = userTask;
         }
 
-        public async Task<List<UserTask>> GetAllTasksService()
+        public async Task<List<UserTask>> GetAllTasksService(string userId)
         {
-            return await _usertask.GetAllTasksAsync();
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new Exception("Unauthorized");
+            }
+            return await _usertask.GetAllTasksAsync(userId);
         }
 
-        public async Task<UserTask> GetTaskService(int id)
+        public async Task<UserTask> GetTaskService(int id, string userId)
         {
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new Exception("Unauthorized");
+            }
+
             if (id <= 0)
             {
                 throw new Exception("Invalid task ID.");
             }
-            return await _usertask.GetAsync(u => u.Id == id, tracked: false);
+            return await _usertask.GetAsync(u => u.Id == id && u.user_id == userId, tracked: false);
         }
 
         public async Task CreateTaskService(UserTask task)
@@ -63,9 +72,14 @@ namespace BLL.Services
             return result;
         }
 
-        public async Task DeleteTaskService(int id)
+        public async Task DeleteTaskService(int id, string userId)
         {
-            var task = await GetTaskService(id);
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new Exception("Unauthorized");
+            }
+
+            var task = await GetTaskService(id, userId);
             if(task == null)
             {
                 throw new KeyNotFoundException($"Villa with ID {id} not found");

@@ -67,7 +67,7 @@ namespace DAL.Repository
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, user.UserName.ToString()),
-                    new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
