@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\configureswaggeroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\configureswaggeroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|d:\\kiet\u0027s folder\\code\\learning\\c#\\todolistapi\\todoserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{683EF497-EE61-462A-99E9-2B21DDC79C3E}|TodoServer\\TodoServer.csproj|solutionrelative:todoserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,71 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Program.cs",
-              "RelativeDocumentMoniker": "TodoServer\\Program.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Program.cs",
-              "RelativeToolTip": "TodoServer\\Program.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAmwEAAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:49:30.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MappingConfig.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\MappingConfig.cs",
-              "RelativeDocumentMoniker": "TodoServer\\MappingConfig.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\MappingConfig.cs",
-              "RelativeToolTip": "TodoServer\\MappingConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:49:28.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConfigureSwaggerOptions.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\ConfigureSwaggerOptions.cs",
-              "RelativeDocumentMoniker": "TodoServer\\ConfigureSwaggerOptions.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\ConfigureSwaggerOptions.cs",
-              "RelativeToolTip": "TodoServer\\ConfigureSwaggerOptions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:49:26.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserTaskController.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\UserTaskController.cs",
-              "RelativeDocumentMoniker": "TodoServer\\Controllers\\UserTaskController.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\UserTaskController.cs",
-              "RelativeToolTip": "TodoServer\\Controllers\\UserTaskController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:49:20.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "TodoServer\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\KIET\u0027s Folder\\CODE\\Learning\\C#\\ToDoListAPI\\TodoServer\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "TodoServer\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:49:15.939Z",
-              "EditorCaption": ""
             }
           ]
         }

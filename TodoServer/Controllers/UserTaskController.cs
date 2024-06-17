@@ -94,9 +94,10 @@ namespace TodoServer.Controllers
 
                 await _userTaskService.CreateTaskService(task, userId);
 
+
                 _response.Result = _mapper.Map<TaskDTO>(task);
                 _response.StatusCode = HttpStatusCode.OK;
-                return CreatedAtRoute("GetTask", new { id = task.Id }, task);
+                return Ok(_response);
             } catch (Exception ex)
             {
                 _response.IsSuccess = false;

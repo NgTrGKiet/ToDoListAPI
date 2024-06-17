@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodoServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4b6a061adffa46ac9352e860016676f97cdd194")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+269b88b2269ea71796b493f3a84f0411fa07dbc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodoServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodoServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,12 +12,12 @@ namespace TodoServer.Controllers
     [Route("api/auth")]
     public class AuthController : Controller
     {
-        private readonly IAuthService _dbauth;
+        private readonly IAuthService _AuthService;
         protected APIResponse _response;
         private readonly IMapper _mapper;
-        public AuthController(IAuthService dbauth, IMapper mapper)
+        public AuthController(IAuthService AuthService, IMapper mapper)
         {
-            _dbauth = dbauth;
+            _AuthService = AuthService;
             _mapper = mapper;
             this._response = new();
         }
@@ -27,7 +27,7 @@ namespace TodoServer.Controllers
         {
             try
             {
-                var user = await _dbauth.Register(model);
+                var user = await _AuthService.Register(model);
                 _response.Result = _mapper.Map<UserDTO>(user);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
@@ -45,7 +45,7 @@ namespace TodoServer.Controllers
         {
             try
             {
-                var tokenDTO = await _dbauth.Login(model);
+                var tokenDTO = await _AuthService.Login(model);
                 _response.StatusCode = HttpStatusCode.OK;
                 _response.IsSuccess = true;
                 _response.Result = tokenDTO;

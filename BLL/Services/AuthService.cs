@@ -9,18 +9,18 @@ namespace BLL.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly IAuthRepository _dbAuth;
+        private readonly IAuthRepository _authRepo;
         private readonly PasswordHasher<User> _passwordHasher;
 
-        public AuthService(IAuthRepository dbAuth)
+        public AuthService(IAuthRepository authRepo)
         {
-            _dbAuth = dbAuth;
+            _authRepo = authRepo;
             _passwordHasher = new PasswordHasher<User>();
         }
 
         public async Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO)
         {
-            bool checkUserName = _dbAuth.IsUniqueUser(loginRequestDTO.UserName);
+            bool checkUserName = _authRepo.IsUniqueUser(loginRequestDTO.UserName);
             if(checkUserName)
             {
                 throw new Exception("UserName doesn't exist");
@@ -29,7 +29,7 @@ namespace BLL.Services
             {
                 throw new Exception("Password must have at least 8 characters");
             }
-            var TokenReturn = await _dbAuth.Login(loginRequestDTO);
+            var TokenReturn = await _authRepo.Login(loginRequestDTO); 
             if (TokenReturn == null)
             {
                 throw new Exception("Username or password is incorrect");
@@ -39,7 +39,7 @@ namespace BLL.Services
         }
         public async Task<User> Register(RegisterRequestDTO registerationRequestDTO)
         {
-            bool ifUserNameUnique = _dbAuth.IsUniqueUser(registerationRequestDTO.UserName);
+            bool ifUserNameUnique = _authRepo.IsUniqueUser(registerationRequestDTO.UserName);
             if (ifUserNameUnique == false)
             {
                 throw new Exception("Username already exists");
@@ -55,7 +55,7 @@ namespace BLL.Services
                 Id = Guid.NewGuid().ToString("N").Substring(0, 5),
             };
             user.Password = _passwordHasher.HashPassword(user, registerationRequestDTO.Password);
-            var UserReturn = await _dbAuth.Register(registerationRequestDTO, user);
+            var UserReturn = await _authRepo.Register(registerationRequestDTO, user);
             
             if(UserReturn == null)
             {
