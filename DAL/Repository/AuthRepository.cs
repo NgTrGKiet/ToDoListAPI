@@ -1,10 +1,6 @@
 ﻿using DAL.Entites.DTO;
 using DAL.Repository.IRepository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using DAL.Entites;
 using DAL.Entities.DTO;
 using DAL.Data;
@@ -37,7 +33,7 @@ namespace DAL.Repository
             var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginRequestDTO.Password);
             if (result == PasswordVerificationResult.Failed || user == null)
             {
-                throw new Exception("Something wrong");
+                throw new Exception("Username or password is incorrect");
             }
 
             var jwtTokenId = $"JTI{Guid.NewGuid()}";

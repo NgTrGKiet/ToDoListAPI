@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.Entites
 {
@@ -15,7 +10,7 @@ namespace DAL.Entites
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
-        public string? Content { get; set; }
+        public string Content { get; set; }
         [ForeignKey("Users")]
         public string User_id { get; set; }
         public string Status { get; set; }

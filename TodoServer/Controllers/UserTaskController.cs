@@ -5,7 +5,6 @@ using DAL.Entites;
 using DAL.Entites.DTO;
 using DAL.Entities.DTO;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Security.Claims;

@@ -2,14 +2,8 @@
 using DAL.Entites.DTO;
 using DAL.Entites;
 using DAL.Entities.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DAL.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
-using System.Net;
 
 namespace BLL.Services
 {
@@ -26,6 +20,11 @@ namespace BLL.Services
 
         public async Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO)
         {
+            bool checkUserName = _dbAuth.IsUniqueUser(loginRequestDTO.UserName);
+            if(checkUserName)
+            {
+                throw new Exception("UserName doesn't exist");
+            }
            if(loginRequestDTO.Password.Length < 8)
             {
                 throw new Exception("Password must have at least 8 characters");

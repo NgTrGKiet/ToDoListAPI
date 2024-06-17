@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using BLL.Services.IService;
+﻿using BLL.Services.IService;
 using DAL.Entites;
-using DAL.Entities.DTO;
-using DAL.Repository;
 using DAL.Repository.IRepository;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BLL.Services
 {
