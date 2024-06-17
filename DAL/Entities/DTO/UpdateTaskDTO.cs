@@ -12,10 +12,10 @@ namespace DAL.Entities.DTO
     {
         [Required]
         public int Id { get; set; }
-        public string title { get; set; }
-        public string content { get; set; }
-        public string status { get; set; }
-        public string priority { get; set; }
+        public string? Title { get; set; }
+        public string? Content { get; set; }
+        public string? Status { get; set; }
+        public string? Priority { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
     }

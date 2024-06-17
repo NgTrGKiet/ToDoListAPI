@@ -25,7 +25,7 @@ namespace DAL.Repository
 
         public async Task<List<UserTask>> GetAllTasksAsync(string userId)
         {
-            return await _dbSet.Where(u=>u.user_id == userId).ToListAsync();
+            return await _dbSet.Where(u=>u.User_id == userId).ToListAsync();
         }
 
         public async Task<UserTask> GetAsync(Expression<Func<UserTask, bool>> filter = null, bool tracked = true)
@@ -42,7 +42,6 @@ namespace DAL.Repository
                 query = query.Where(filter);
             }
 
-            //var result = await query.FirstOrDefaultAsync();
             return await query.FirstOrDefaultAsync(); ;
         }
         public async Task CreateAsync(UserTask entity)

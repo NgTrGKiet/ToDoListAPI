@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using DAL.Entites;
 
 namespace DAL.Data
@@ -15,7 +9,7 @@ namespace DAL.Data
         {
         }
 
-        public DbSet<User>Users {  get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<UserTask> UserTasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

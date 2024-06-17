@@ -12,7 +12,7 @@ namespace BLL.Services.IService
     {
         Task<List<UserTask>> GetAllTasksService(string userId);
         Task<UserTask> GetTaskService(int id, string userId);
-        Task CreateTaskService(UserTask task);
+        Task CreateTaskService(UserTask task, string userId);
         Task<UserTask> UpdateTaskService(UserTask task);
         Task DeleteTaskService(int id, string userId);
     }

@@ -45,12 +45,22 @@ namespace BLL.Services
             {
                 throw new Exception("Invalid task ID.");
             }
-            return await _usertask.GetAsync(u => u.Id == id && u.user_id == userId, tracked: false);
+
+            var result = await _usertask.GetAsync(u => u.Id == id && u.User_id == userId, tracked: false);
+            if(result == null)
+            {
+                throw new Exception($"Can't get task with {id}");
+            }
+            return result;
         }
 
-        public async Task CreateTaskService(UserTask task)
+        public async Task CreateTaskService(UserTask task, string userId)
         {
-            if(await _usertask.GetAsync(u=>u.title.ToLower() == task.title.ToLower()) != null)
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new Exception("Unauthorized");
+            }
+            if (await _usertask.GetAsync(u=>u.Title.ToLower() == task.Title.ToLower() && u.User_id == userId) != null)
             {
                 throw new Exception("Task already exist");
             }

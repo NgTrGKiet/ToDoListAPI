@@ -16,17 +16,18 @@ namespace TodoServer.Controllers
     [Route("api/usertask")]
     public class UserTaskController : Controller
     {
-        private readonly IUserTaskService _usertask;
+        private readonly IUserTaskService _userTaskService;
         protected APIResponse _response;
         private readonly IMapper _mapper;
-        public UserTaskController(IUserTaskService usertask, IMapper mapper)
+        public UserTaskController(IUserTaskService UserTaskService, IMapper mapper)
         {
-            _usertask = usertask;
+            _userTaskService = UserTaskService;
             this._response = new();
             _mapper = mapper;
         }
 
         [HttpGet("all-task")]
+        //[ResponseCache(Duration = 30)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [Authorize]
         public async Task<IActionResult> GetTasks()
@@ -34,7 +35,7 @@ namespace TodoServer.Controllers
             try
             {
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                IEnumerable<UserTask> taskLists = await _usertask.GetAllTasksService(userId);
+                IEnumerable<UserTask> taskLists = await _userTaskService.GetAllTasksService(userId);
                 _response.Result = _mapper.Map<List<TaskDTO>>(taskLists);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
@@ -60,20 +61,15 @@ namespace TodoServer.Controllers
             {
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-                var task = await _usertask.GetTaskService(id, userId);
+                var task = await _userTaskService.GetTaskService(id, userId);
 
-                if (task == null)
-                {
-                    _response.StatusCode = HttpStatusCode.NotFound;
-                    return NotFound();
-                }
                 _response.Result = _mapper.Map<TaskDTO>(task);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
 
             } catch (Exception ex) {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { ex.ToString() };
+                _response.ErrorMessages = new List<string>() { ex.Message };
                 _response.StatusCode = HttpStatusCode.BadRequest;
                 return BadRequest(_response);
             }
@@ -88,19 +84,16 @@ namespace TodoServer.Controllers
             try
             {
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                if (string.IsNullOrEmpty(userId))
-                {
-                    throw new Exception("Unauthorized");
-                }
+        
                 if (createDTO == null)
                 {
                     return BadRequest(createDTO);
                 }
 
                 UserTask task = _mapper.Map<UserTask>(createDTO);
-                task.user_id = userId;
+                task.User_id = userId;
 
-                await _usertask.CreateTaskService(task);
+                await _userTaskService.CreateTaskService(task, userId);
 
                 _response.Result = _mapper.Map<TaskDTO>(task);
                 _response.StatusCode = HttpStatusCode.OK;
@@ -116,7 +109,6 @@ namespace TodoServer.Controllers
 
         [HttpPut("{id:int}", Name = "UpdateTask")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize]
         public async Task<IActionResult> UpdateTask(int id, [FromBody] UpdateTaskDTO updateDTO)
@@ -133,15 +125,15 @@ namespace TodoServer.Controllers
                     return BadRequest();
                 }
 
-                if(await _usertask.GetTaskService(id, userId) ==  null)
+                if(await _userTaskService.GetTaskService(id, userId) ==  null)
                 {
                     ModelState.AddModelError("ErrorMessage", "Task ID is Invalid!");
                 }
 
                 UserTask task = _mapper.Map<UserTask>(updateDTO);
-                task.user_id = userId;
+                task.User_id = userId;
 
-                var result = await _usertask.UpdateTaskService(task);
+                var result = await _userTaskService.UpdateTaskService(task);
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
                 _response.Result = result;
@@ -169,7 +161,7 @@ namespace TodoServer.Controllers
                 {
                     return BadRequest();
                 }
-                await _usertask.DeleteTaskService(id, userId);
+                await _userTaskService.DeleteTaskService(id, userId);
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
                 return Ok(_response);

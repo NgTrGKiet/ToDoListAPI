@@ -52,9 +52,8 @@ namespace DAL.Repository
         {
             await _dbSet.AddAsync(user);
             await _db.SaveChangesAsync();
-            var userReturn = await _dbSet.FirstOrDefaultAsync(u => u.UserName == registerationRequestDTO.UserName);
-
-            return userReturn;
+            var UserReturn = await _dbSet.FirstOrDefaultAsync(u => u.UserName == registerationRequestDTO.UserName);
+            return UserReturn;
         }
 
         private async Task<string> GetAccessToken(User user, string jwtTokenId)
@@ -80,7 +79,6 @@ namespace DAL.Repository
 
         public bool IsUniqueUser(string username)
         {
-            //throw new NotImplementedException();
             var user = _dbSet.FirstOrDefault(x => x.UserName == username);
             if (user == null)
             {
