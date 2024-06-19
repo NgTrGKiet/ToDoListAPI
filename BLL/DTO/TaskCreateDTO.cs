@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DAL.Entities.DTO
+namespace BLL.DTO
 {
-    public class TaskDTO
+    public class TaskCreateDTO
     {
-        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
         public string? Content { get; set; }

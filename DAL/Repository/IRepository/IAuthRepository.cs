@@ -1,13 +1,11 @@
-﻿using DAL.Entites.DTO;
-using DAL.Entites;
-using DAL.Entities.DTO;
+﻿using DAL.Entities;
 
 namespace DAL.Repository.IRepository
 {
     public interface IAuthRepository
     {
         public bool IsUniqueUser(string username);
-        Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO);
-        Task<User> Register(RegisterRequestDTO registerationRequestDTO, User user);
+        Task<string> Login(string Username, string Password);
+        Task<User> Register(User user);
     }
 }

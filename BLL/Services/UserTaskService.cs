@@ -1,5 +1,6 @@
-﻿using BLL.Services.IService;
-using DAL.Entites;
+﻿using BLL.Model;
+using BLL.Services.IService;
+using DAL.Entities;
 using DAL.Repository.IRepository;
 
 namespace BLL.Services
@@ -13,7 +14,7 @@ namespace BLL.Services
             _userTaskRepo = userTaskRepo;
         }
 
-        public async Task<List<UserTask>> GetAllTasksService(string userId)
+        public async Task<List<UserTask>> GetAllTasksService(string userId, FilterModel filter = null)
         {
             if (string.IsNullOrEmpty(userId))
             {
@@ -62,6 +63,10 @@ namespace BLL.Services
 
         public async Task<UserTask> UpdateTaskService(UserTask task)
         {
+            if (await _userTaskRepo.GetAsync(u => u.Title.ToLower() == task.Title.ToLower() && u.User_id == task.User_id) != null)
+            {
+                throw new Exception("Task already exist");
+            }
             if (task.Start > task.End)
             {
                 throw new Exception("End date cannot be earlier than start date");

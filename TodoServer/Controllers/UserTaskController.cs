@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using BLL.Model;
 using BLL.Services.IService;
-using DAL.Entites;
-using DAL.Entites.DTO;
-using DAL.Entities.DTO;
+using DAL.Entities;
+using BLL.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -29,12 +28,12 @@ namespace TodoServer.Controllers
         //[ResponseCache(Duration = 30)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [Authorize]
-        public async Task<IActionResult> GetTasks()
+        public async Task<IActionResult> GetTasks([FromQuery] FilterModel filter)
         {
             try
             {
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                IEnumerable<UserTask> taskLists = await _userTaskService.GetAllTasksService(userId);
+                IEnumerable<UserTask> taskLists = await _userTaskService.GetAllTasksService(userId, filter);
                 _response.Result = _mapper.Map<List<TaskDTO>>(taskLists);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
@@ -133,7 +132,8 @@ namespace TodoServer.Controllers
                 UserTask task = _mapper.Map<UserTask>(updateDTO);
                 task.User_id = userId;
 
-                var result = await _userTaskService.UpdateTaskService(task);
+                var usertask = await _userTaskService.UpdateTaskService(task);
+                var result = _mapper.Map<TaskDTO>(usertask);
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
                 _response.Result = result;

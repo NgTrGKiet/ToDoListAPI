@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DAL.Entites;
+using DAL.Entities;
 
 namespace DAL.Data
 {

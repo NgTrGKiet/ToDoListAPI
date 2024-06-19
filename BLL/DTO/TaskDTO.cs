@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DAL.Entities.DTO
+namespace BLL.DTO
 {
-    public class UpdateTaskDTO
+    public class TaskDTO
     {
-        [Required]
         public int Id { get; set; }
-        public string? Title { get; set; }
+        [Required]
+        public string Title { get; set; }
         public string? Content { get; set; }
-        public string? Status { get; set; }
-        public string? Priority { get; set; }
+        public string Status { get; set; }
+        public string Priority { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
     }

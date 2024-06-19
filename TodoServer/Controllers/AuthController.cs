@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using BLL.Model;
 using BLL.Services.IService;
-using DAL.Entites.DTO;
-using DAL.Entities.DTO;
+using BLL.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

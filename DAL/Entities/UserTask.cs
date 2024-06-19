@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace DAL.Entites
+namespace DAL.Entities
 {
     public class UserTask
     {

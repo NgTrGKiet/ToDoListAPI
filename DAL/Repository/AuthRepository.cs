@@ -1,8 +1,6 @@
-﻿using DAL.Entites.DTO;
-using DAL.Repository.IRepository;
+﻿using DAL.Repository.IRepository;
 using System.Text;
-using DAL.Entites;
-using DAL.Entities.DTO;
+using DAL.Entities;
 using DAL.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
@@ -27,10 +25,10 @@ namespace DAL.Repository
             this._dbSet = _db.Set<User>();
         }
 
-        public async Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO)
+        public async Task<string> Login(string Username, string Password)
         {
-            var user = await _dbSet.FirstOrDefaultAsync(u => u.UserName.ToLower() == loginRequestDTO.UserName.ToLower());
-            var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginRequestDTO.Password);
+            var user = await _dbSet.FirstOrDefaultAsync(u => u.UserName.ToLower() == Username.ToLower());
+            var result = _passwordHasher.VerifyHashedPassword(user, user.Password, Password);
             if (result == PasswordVerificationResult.Failed || user == null)
             {
                 throw new Exception("Username or password is incorrect");
@@ -38,17 +36,17 @@ namespace DAL.Repository
 
             var jwtTokenId = $"JTI{Guid.NewGuid()}";
             var accesstoken = await GetAccessToken(user, jwtTokenId);
-            TokenDTO TokenDTO = new TokenDTO
-            {
-                AccessToken = accesstoken,
-            };
-            return TokenDTO;
+            //TokenDTO TokenDTO = new TokenDTO
+            //{
+            //    AccessToken = accesstoken,
+            //};
+            return accesstoken;
         }
-        public async Task<User> Register(RegisterRequestDTO registerationRequestDTO, User user)
+        public async Task<User> Register(User user)
         {
             await _dbSet.AddAsync(user);
             await _db.SaveChangesAsync();
-            var UserReturn = await _dbSet.FirstOrDefaultAsync(u => u.UserName == registerationRequestDTO.UserName);
+            var UserReturn = await _dbSet.FirstOrDefaultAsync(u => u.UserName == user.UserName);
             return UserReturn;
         }
 

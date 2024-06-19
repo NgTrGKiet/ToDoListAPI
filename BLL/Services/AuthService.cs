@@ -1,9 +1,8 @@
 ﻿using BLL.Services.IService;
-using DAL.Entites.DTO;
-using DAL.Entites;
-using DAL.Entities.DTO;
+using DAL.Entities;
 using DAL.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
+using BLL.DTO;
 
 namespace BLL.Services
 {
@@ -29,12 +28,16 @@ namespace BLL.Services
             {
                 throw new Exception("Password must have at least 8 characters");
             }
-            var TokenReturn = await _authRepo.Login(loginRequestDTO); 
+            var TokenReturn = await _authRepo.Login(loginRequestDTO.UserName, loginRequestDTO.Password); 
             if (TokenReturn == null)
             {
                 throw new Exception("Username or password is incorrect");
             }
-            return TokenReturn;
+            TokenDTO TokenDTO = new TokenDTO
+            {
+                AccessToken = TokenReturn,
+            };
+            return TokenDTO;
             
         }
         public async Task<User> Register(RegisterRequestDTO registerationRequestDTO)
@@ -55,7 +58,7 @@ namespace BLL.Services
                 Id = Guid.NewGuid().ToString("N").Substring(0, 5),
             };
             user.Password = _passwordHasher.HashPassword(user, registerationRequestDTO.Password);
-            var UserReturn = await _authRepo.Register(registerationRequestDTO, user);
+            var UserReturn = await _authRepo.Register(user);
             
             if(UserReturn == null)
             {

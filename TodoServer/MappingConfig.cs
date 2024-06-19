@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using DAL.Entites;
-using DAL.Entites.DTO;
-using DAL.Entities.DTO;
+using DAL.Entities;
+using BLL.DTO;
 
 namespace TodoServer
 {

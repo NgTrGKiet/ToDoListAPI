@@ -1,6 +1,6 @@
-﻿using DAL.Entites.DTO;
-using DAL.Entites;
-using DAL.Entities.DTO;
+﻿using BLL.DTO;
+using BLL.Model;
+using DAL.Entities;
 
 namespace BLL.Services.IService
 {
