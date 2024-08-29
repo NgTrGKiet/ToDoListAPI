@@ -17,7 +17,7 @@ namespace BLL.Services
             _passwordHasher = new PasswordHasher<User>();
         }
 
-        public async Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO)
+        public async Task<TokenDTO> Login(LoginRequestDto loginRequestDTO)
         {
             bool checkUserName = _authRepo.IsUniqueUser(loginRequestDTO.UserName);
             if(checkUserName)
@@ -40,24 +40,24 @@ namespace BLL.Services
             return TokenDTO;
             
         }
-        public async Task<User> Register(RegisterRequestDTO registerationRequestDTO)
+        public async Task<User> Register(RegisterRequestDto registerationRequestDto)
         {
-            bool ifUserNameUnique = _authRepo.IsUniqueUser(registerationRequestDTO.UserName);
+            bool ifUserNameUnique = _authRepo.IsUniqueUser(registerationRequestDto.UserName);
             if (ifUserNameUnique == false)
             {
                 throw new Exception("Username already exists");
             }
-            if (registerationRequestDTO.Password.Length < 8)
+            if (registerationRequestDto.Password.Length < 8)
             {
                 throw new Exception("Password must have at least 8 characters");
             }
             User user = new()
             {
-                UserName = registerationRequestDTO.UserName,
-                Name = registerationRequestDTO.Name,
+                UserName = registerationRequestDto.UserName,
+                Name = registerationRequestDto.Name,
                 Id = Guid.NewGuid().ToString("N").Substring(0, 5),
             };
-            user.Password = _passwordHasher.HashPassword(user, registerationRequestDTO.Password);
+            user.Password = _passwordHasher.HashPassword(user, registerationRequestDto.Password);
             var UserReturn = await _authRepo.Register(user);
             
             if(UserReturn == null)

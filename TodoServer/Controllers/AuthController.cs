@@ -22,7 +22,7 @@ namespace TodoServer.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register ([FromBody] RegisterRequestDTO model)
+        public async Task<IActionResult> Register ([FromBody] RegisterRequestDto model)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace TodoServer.Controllers
             }
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto model)
         {
             try
             {
